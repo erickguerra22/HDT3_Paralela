@@ -41,7 +41,7 @@ __global__ void hello ()
 int main ()
 {
   dim3 g (10,10,10);
-  dim3 b (100,10);
+  dim3 b (100);
   hello <<< g, b >>> ();
   cudaThreadSynchronize ();
   //cudaDeviceSynchronize();  //use instead, ^ is deprecated
